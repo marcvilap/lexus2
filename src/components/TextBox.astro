@@ -1,0 +1,17 @@
+---
+import TextTitle from '$components/TextTitle.astro'
+
+interface Props {
+	title: string
+}
+
+const { title } = Astro.props
+---
+
+<div class="reveal">
+	<TextTitle title={title} />
+
+	<hr class="reveal:scale-x-0 revealed:delay-100 my-12 origin-left border-current" />
+
+	<div class="reveal:opacity-0 reveal:translate-y-12 revealed:delay-200 grid gap-6"><slot /></div>
+</div>

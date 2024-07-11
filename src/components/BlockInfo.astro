@@ -1,0 +1,23 @@
+---
+import Container from '$components/Container.astro'
+import Columns from '$components/Columns.astro'
+import TextTitle from '$components/TextTitle.astro'
+import video from '$assets/videos/video.mp4'
+---
+
+<Container bgColor="bg-neutral-800">
+	<div class="reveal mx-auto mb-24 max-w-4xl text-center text-stone-300">
+		<TextTitle title="La elección de ingredientes frescos y locales no solo garantiza una calidad insuperable, sino que también refuerza la importancia de apoyar a los productores locales y de promover una alimentación más sostenible y consciente." />
+	</div>
+	<Columns reveal>
+		<div slot="col-1" class="reveal:opacity-0 lg:reveal:-translate-x-24">
+			<video class="mx-auto w-full max-lg:max-w-md" src={video} autoplay loop muted playsinline></video>
+		</div>
+		<div slot="col-2" class="reveal:opacity-0 lg:reveal:translate-x-24">
+			<p>
+				El viaje culinario concluye en el emblemático restaurante Cocina Hermanos Torres, un espacio donde la creatividad y la tradición se encuentran para dar vida a platos que sorprenden y deleitan a los comensales. Cada plato es una muestra del talento y la dedicación de estos chefs que, más allá de cocinar, buscan crear
+				<strong>experiencias que conecten a las personas con el entorno</strong> y con los sabores auténticos de la temporada.
+			</p>
+		</div>
+	</Columns>
+</Container>

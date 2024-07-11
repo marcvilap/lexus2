@@ -1,0 +1,18 @@
+---
+import Container from '$components/Container.astro'
+import Columns from '$components/Columns.astro'
+
+interface Props {
+	bgImage?: 'bg-img-texture' | 'bg-img-people' | 'bg-img-car'
+}
+
+const { bgImage } = Astro.props
+
+const bgColor = 'bg-neutral-800'
+---
+
+<Container {bgColor} {bgImage} minHScreen>
+	<Columns>
+		<div class="mx-auto max-lg:max-w-md lg:col-start-2" slot="col-1"><slot /></div>
+	</Columns>
+</Container>

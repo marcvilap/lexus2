@@ -1,0 +1,19 @@
+---
+import { Image } from 'astro:assets'
+import Container from '$components/Container.astro'
+import Columns from '$components/Columns.astro'
+import imgMap from '$assets/images/map.webp'
+import imgCar from '$assets/images/car.webp'
+---
+
+<Container>
+	<Columns reveal>
+		<div slot="col-1" class="reveal:opacity-0 lg:reveal:-translate-x-24 relative mx-auto max-lg:max-w-md">
+			<Image src={imgMap} width="744" alt="" />
+			<Image class="reveal:opacity-0 reveal:-translate-x-96 revealed:delay-300 absolute left-[30%] top-[5%] w-[30%]" src={imgCar} width="220" alt="" />
+		</div>
+		<div slot="col-2" class="reveal:opacity-0 lg:reveal:translate-x-24 mx-auto max-lg:max-w-md">
+			<p>En la cuarta entrega de “Recetas con recorrido”, los Hermanos Torres, con su estilo inconfundible y su amor por la <strong>cocina kilómetro cero</strong>, nos invitan a descubrir dos platos estelares del verano. A bordo del elegante <a class="font-black text-stone-600 underline" target="_blank" href="https://www.lexusauto.es/modelos/rx/promociones-particulares-rx">Lexus RX 450h+ híbrido enchufable</a>, los célebres chefs han recorrido Barcelona, <strong>seleccionando cuidadosamente ingredientes frescos</strong> y locales para crear dos recetas que reflejan la esencia de la ciudad.</p>
+		</div>
+	</Columns>
+</Container>

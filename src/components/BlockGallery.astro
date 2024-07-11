@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets'
+import Container from '$components/Container.astro'
+import TextTitle from '$components/TextTitle.astro'
+import Icon from '$components/Icon.astro'
+import img01 from '$assets/images/gallery-01.webp'
+import img02 from '$assets/images/gallery-02.webp'
+import img03 from '$assets/images/gallery-03.webp'
+import img04 from '$assets/images/gallery-04.webp'
+import img05 from '$assets/images/gallery-05.webp'
+---
+
+<Container bgColor="bg-stone-300" bgImage="bg-img-texture">
+	<div class="reveal mx-auto max-w-4xl text-center">
+		<TextTitle title="“Cada mañana, los Hermanos Torres recorren estos parajes a pie o en bicicleta, recogiendo una variedad de flores que, además de embellecer sus platos, aportan un toque fresco y natural que eleva cada creación culinaria”." />
+	</div>
+
+	<div class="reveal -mx-20 my-24 flex items-center">
+		<div class="reveal:opacity-0 reveal:scale-75 reveal:translate-x-64 w-[23%]">
+			<div class="-mx-4"><Image src={img01} width={479} alt="" /></div>
+		</div>
+		<div class="reveal:opacity-0 reveal:scale-75 reveal:translate-x-64 revealed:delay-50 w-[27%]">
+			<div class="-mx-4"><Image src={img02} width={553} alt="" /></div>
+		</div>
+		<div class="reveal:opacity-0 reveal:scale-75 reveal:translate-x-64 revealed:delay-150 w-[14%]">
+			<div class="-mx-4"><Image src={img03} width={310} alt="" /></div>
+		</div>
+		<div class="reveal:opacity-0 reveal:scale-75 reveal:translate-x-64 revealed:delay-200 w-[18%]">
+			<div class="-mx-4"><Image src={img04} width={385} alt="" /></div>
+		</div>
+		<div class="reveal:opacity-0 reveal:scale-75 reveal:translate-x-64 revealed:delay-250 w-[18%]">
+			<div class="-mx-4"><Image src={img05} width={385} alt="" /></div>
+		</div>
+	</div>
+
+	<div class="reveal mx-auto max-w-lg">
+		<p class="reveal:opacity-0 reveal:translate-y-12">La elección de las flores no es casual. En su búsqueda constante por ingredientes responsables, los chefs valoran aquellos que se encuentran en el entorno cercano de sus restaurantes. Esta práctica no solo <strong>reduce la huella de carbono asociada al transporte de alimentos</strong>, sino que también garantiza la máxima frescura y calidad. Las flores, con sus delicados sabores y vibrantes colores, son el toque secreto para esta receta veraniega.</p>
+	</div>
+
+	<Icon class="absolute -bottom-6 right-[10%] w-32 text-[#441F00]" name="flower" />
+</Container>

@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets'
+import Container from '$components/Container.astro'
+import Columns from '$components/Columns.astro'
+
+interface Props {
+	bgColor?: 'bg-white' | 'bg-neutral-800' | 'bg-stone-300'
+	bgImage?: 'bg-img-texture' | 'bg-img-people' | 'bg-img-car'
+	image: ImageMetadata
+	stretch?: boolean
+}
+
+const { bgColor, bgImage, image, stretch } = Astro.props
+---
+
+<Container {bgColor} {bgImage} minHScreen>
+	<Columns>
+		<div slot="col-1" class:list={['mx-auto max-lg:max-w-md lg:pr-12', stretch && 'flex flex-col items-start justify-between gap-6 self-stretch']}>
+			<slot />
+		</div>
+		<div slot="col-2" class="reveal mx-auto max-lg:max-w-md lg:absolute lg:right-0 lg:top-0 lg:h-full lg:w-1/2">
+			<Image class="reveal:opacity-0 reveal:scale-50 lg:reveal:translate-x-full lg:size-full lg:object-cover" src={image} width={1080} alt="" />
+		</div>
+	</Columns>
+</Container>

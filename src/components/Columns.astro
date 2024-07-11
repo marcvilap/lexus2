@@ -1,0 +1,12 @@
+---
+interface Props {
+	reveal?: boolean
+}
+
+const { reveal } = Astro.props
+---
+
+<div class:list={[reveal && 'reveal', 'grid w-full items-center gap-12 lg:grid-cols-2 xl:gap-24']}>
+	<slot name="col-1" />
+	<slot name="col-2" />
+</div>

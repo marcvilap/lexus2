@@ -1,0 +1,59 @@
+---
+import Layout from '$layouts/Layout.astro'
+import BlockHalf from '$components/BlockHalf.astro'
+import BlockMap from '$components/BlockMap.astro'
+import BlockBanner from '$components/BlockBanner.astro'
+import BlockGallery from '$components/BlockGallery.astro'
+import BlockInfo from '$components/BlockInfo.astro'
+import Footer from '$components/Footer.astro'
+import TextBox from '$components/TextBox.astro'
+import TextTitle from '$components/TextTitle.astro'
+import Icon from '$components/Icon.astro'
+import img01 from '$assets/images/image-01.webp'
+import img02 from '$assets/images/image-02.webp'
+---
+
+<Layout>
+	<BlockHalf image={img01} bgColor="bg-stone-300" bgImage="bg-img-texture" stretch>
+		<a class="xl:-translate-y-12" href="/">
+			<small class="mb-1 block text-xs">Rumbo al kilómetro 0<br />Un proyecto de</small>
+			<Icon class="w-36" name="lexus" />
+		</a>
+		<div>
+			<TextBox title="Los dos platos del verano (de proximidad) de los Hermanos Torres">
+				<p>Sergio y Javier. Javier y Sergio. Los Torres, reconocidos por su compromiso con la sostenibilidad y la proximidad, nos presentan dos recetas que encapsulan la magia gastronómica de Barcelona y el sabor del verano. ¿Hay algo más puro que alimentarnos de lo que nos regala nuestro entorno cada temporada?</p>
+			</TextBox>
+		</div>
+	</BlockHalf>
+
+	<BlockMap />
+
+	<BlockBanner bgImage="bg-img-people">
+		<TextBox title="La belleza de lo local: flores del Tibidabo y la Rabassada">
+			<p>Uno de los platos estrella de esta entrega se elabora con flores recolectadas en las laderas del Monte Tibidabo y la Rabassada, lugares emblemáticos que no solo ofrecen vistas espectaculares de la ciudad, sino también una abundante riqueza de flora autóctona.</p>
+		</TextBox>
+	</BlockBanner>
+
+	<BlockGallery />
+
+	<BlockBanner bgImage="bg-img-car">
+		<TextBox title="Barcelona en cada bocado">
+			<p>
+				La elección de los ingredientes y el proceso de recolección no son solo una muestra del <strong>compromiso de los Hermanos Torres con la cocina de kilómetro cero</strong>, sino también una forma de rendir homenaje a la ciudad que los ha visto crecer como chefs y como personas. En cada paseo por las calles emblemáticas de Barcelona, en cada visita al Tibidabo o al puerto, los hermanos encuentran inspiración y una conexión profunda con la historia y la identidad de la ciudad.
+			</p>
+			<p>
+				El recorrido por la ciudad a bordo del <a class="font-black text-stone-600 underline" target="_blank" href="https://www.lexusauto.es/modelos/rx/promociones-particulares-rx">Lexus RX 450h+</a> no solo es una muestra de estilo y comodidad, sino también una declaración de principios. Este vehículo híbrido enchufable simboliza el <strong>compromiso con la sostenibilidad y la innovación</strong>, valores que los Hermanos Torres comparten y promueven a través de su cocina.
+			</p>
+		</TextBox>
+	</BlockBanner>
+
+	<BlockInfo />
+
+	<BlockHalf image={img02}>
+		<div class="reveal">
+			<TextTitle title="La elección de ingredientes frescos y locales no solo garantiza una calidad insuperable, sino que también refuerza la importancia de apoyar a los productores locales y de promover una alimentación más sostenible y consciente." />
+		</div>
+	</BlockHalf>
+
+	<Footer />
+</Layout>

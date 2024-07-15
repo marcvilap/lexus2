@@ -4,7 +4,7 @@ import Icon from '$components/Icon.astro'
 import TextTitle from '$components/TextTitle.astro'
 
 const links = [
-	{ title: 'Otoño en el Montsen', link: 'https://elotonoenunplato.eltiempo.es/' },
+	{ title: 'Otoño en el Montseny', link: 'https://elotonoenunplato.eltiempo.es/' },
 	{ title: 'Verano en la Costa Brava', link: 'https://www.eltiempo.es/vida-saludable/el-verano-en-un-plato-a-que-sabe-la-costa-brava-bracon' },
 ]
 ---
@@ -17,13 +17,13 @@ const links = [
 
 		<hr class="my-24 border-current reveal:scale-x-0 revealed:delay-100" />
 
-		<TextTitle title="Más ‘Recetas con recorrido revealed:delay-200" />
+		<TextTitle title="Más Recetas con recorrido " />
 	</div>
 
 	<div class="mb-24 mt-12 flex flex-wrap justify-center gap-x-6 gap-y-3">
 		{
 			links.map(({ title, link }) => (
-				<a class="border border-neutral-800 px-6 py-3 transition-colors hover:bg-neutral-800 hover:text-white" target="_blank" href={link}>
+				<a class="border border-neutral-800 px-6 py-3 transition-colors hover:bg-neutral-800 hover:text-white" target="_blank" rel="noindex nofollow" href={link}>
 					{title}
 				</a>
 			))
@@ -32,5 +32,23 @@ const links = [
 
 	<p class="mb-3 text-center">ElTiempo Content para</p>
 
-	<Icon class="mx-auto -mb-12 w-40" name="lexus" />
+	<Icon class="mx-auto w-40" name="lexus" />
+
+	<div class="container mt-4">
+		<ul class="c1 my-8 flex justify-center gap-8">
+			<li>
+				<a href="https://www.eltiempo.es/legal/politica-privacidad.html">Política de Privacidad</a>
+			</li>
+			<li>
+				<a href="https://www.eltiempo.es/legal/condiciones-generales.html">Aviso legal</a>
+			</li>
+			<li>
+				<a href="https://www.eltiempo.es/legal/politica-cookies.html">Política de Cookies</a>
+			</li>
+		</ul>
+
+		<p class="mt-8 text-center">
+			<a href="https://www.eltiempo.es/">© El tiempo, Pelmorex Weather Networks 2021</a>
+		</p>
+	</div>
 </Container>
